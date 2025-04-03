@@ -1,0 +1,210 @@
+/* Basic Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header Styling */
+
+.header {
+    position: relative;
+    background-image: url('image\ 10.png'); /* Background image here */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height for header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centering text vertically */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    position: absolute; /* Make navbar float above hero section */
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+
+.hero-section {
+    margin-top: 60px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ffcc00; /* Call to action background */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+}
+
+/* Main Section Styling */
+
+main {
+    padding: 20px;
+    background-color: #ffffff; /* Background for main section */
+}
+
+.property-listing {
+    padding: 40px 0; /* Ensuring enough space */
+    text-align: center;
+}
+
+.property-listing h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Property Grid Styling */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.property-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card h3 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.price {
+    color: #ffcc00; /* Price highlight color */
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.view-button {
+    background-color: #35424a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #475757; /* Darker button color */
+}
+
+
+/* Footer Styling */
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #35424a;
+    color: white;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+    }
+}
